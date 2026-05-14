@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2024/03/cropped-cropped-2-150x150.png" sizes="32x32" />
+    <title>Ciclos de STI e IT - Proyecto TFG</title>
+</head>
+<body>
+    <div id="fondo-body"></div>
+    <nav id="logo-cabecera"></nav>
+
+    <div id="app">
+        <div id="homeView" class="view-home">
+            <div class="main-card" onclick="showView('sti')">
+                Sistemas de Telecomunicaciones e Informáticos
+            </div>
+            <div class="main-card" onclick="showView('it')">
+                Instalaciones de Telecomunicaciones
+            </div>
+        </div>
+
+        <div id="detailView" class="view-detail" style="display: none;">
+            <div id="detailTitle" class="header-title"></div>
+
+            <div id="sidebar" class="sidebar">
+                </div>
+
+            <div class="content-area">
+                <div id="videoContainer">
+                    <p class="placeholder-text">
+                        <span class="text-desktop">Selecciona un módulo de la izquierda para ver el video</span>
+                        <span class="text-mobile">Selecciona un módulo de arriba para ver el video</span>
+                    </p>
+                </div>
+            </div>
+
+            <button class="back-btn" onclick="goHome()">Volver al Inicio</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

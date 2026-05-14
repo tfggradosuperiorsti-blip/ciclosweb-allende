@@ -1,0 +1,470 @@
+:root {
+    --primary-bg:#f4f4f9;
+    --accent-color: #174cbf;
+    --text-color: #1f2937;
+    --border-radius: 20px;
+    --transition: all 0.3s ease;
+}
+#logo-cabecera{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height:6em;
+    background-image: url(assets/img/I.E.S.-SALVADOR-ALLENDE.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--primary-bg);
+    z-index: 10;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.7);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+}
+svg {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+#fondo-body{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index:-10;
+    overflow: hidden;
+    background-image: url(assets/img/fondo-color.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/* En escritorio mantener el fondo original */
+@media (min-width: 768px) {
+    #fondo-body {
+        background-size:cover;
+    }
+    .view-home {
+    margin-top: 15rem;
+    }
+}
+
+
+#instituto-lineas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Ocultar controles del video */
+video::-webkit-media-controls-panel {
+    display: none !important;
+}
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+video::-moz-media-controls-panel {
+    display: none !important;
+}
+
+/* Contenedor Principal */
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Pantalla de Inicio (Dos Botones) */
+.view-home {
+    display: grid;
+    margin-top: 35rem;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.text-mobile {
+    display: none;
+}
+/* Altura variable para pantallas pequeñas */
+
+@media (min-height: 200px) {
+    .view-home {
+        margin-top: 15rem;
+    }
+
+}
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .view-home {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        gap: 40px;
+    }
+}
+
+.main-card {
+    background: white;
+    border: 4px solid #000;
+    border-radius: var(--border-radius);
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-top: 15rem;
+}
+
+.main-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+/* Pantalla Detalle (IT y STI) */
+.view-detail {
+    display: none;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    background-color: #191919b9;
+    border: 4px solid #000;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+
+.menu-btn {
+    background: white;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.menu-btn:hover, .menu-btn.active {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.content-area {
+    background: white;
+    border: 5px solid #000;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.placeholder-text {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Botón Volver */
+.back-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 30px;
+    background: #1e4fbc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.back-btn:hover {
+    background: #154aa3;
+}
+
+/* ============================================
+   VERSIÓN MÓVIL - AJUSTADA PARA PANTALLAS ALARGADAS (S24, iPhone Pro, etc)
+   ============================================ */
+@media (max-width: 768px) {
+    body, html {
+        overflow: auto;
+    }
+
+    #app {
+        padding: 10px;
+        justify-content: flex-start;
+        padding-top: 80px;
+    }
+
+    .view-home {
+        margin-top: 5rem;
+        gap: 20px;
+    }
+
+    .main-card {
+        font-size: 1.1rem;
+        padding: 25px 15px;
+        margin-top: 0;
+        border-width: 3px;
+    }
+
+    #logo-cabecera {
+        height: 4em;
+    }
+
+    /* Vista detalle */
+    .view-detail {
+        display: none;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        gap: 15px;
+        padding: 10px;
+        height: 100%;
+        /* Usamos dvh (Dynamic Viewport) para compensar la barra del navegador móvil */
+        min-height: calc(100dvh - 90px); 
+    }
+
+    .header-title {
+        font-size: 1rem;
+        padding: 8px;
+        background: rgba(0,0,0,0.7);
+        border-radius: 10px;
+        color: white;
+    }
+
+    /* Sidebar como carrusel horizontal */
+    .sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 6px;
+        padding: 8px 4px; 
+        background: #000;
+        border-radius: 8px;
+        align-items: center; 
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background: var(--accent-color);
+        border-radius: 2px;
+    }
+
+    .menu-btn {
+        flex-shrink: 0;
+        padding: 8px 16px; 
+        font-size: 0.85rem;
+        border-radius: 15px;
+        white-space: nowrap;
+        text-align: center;
+        border-width: 1px;
+        height: auto; 
+    }
+
+    /* Área de video centrada y proporcionada */
+    .content-area {
+        border-radius: 15px;
+        border: none;
+        width: 100%;
+        /* Limitamos la altura para que no se vea gigante en teléfonos muy largos */
+        max-height: 55dvh; 
+        margin: auto 0; 
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-area video {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 15px;
+    }
+
+    .placeholder-text {
+        font-size: 1rem;
+    }
+
+    .back-btn {
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: 25px;
+    }
+
+    /* Ocultamos el texto de PC y mostramos el de móvil */
+    .text-desktop {
+        display: none;
+    }
+    
+    .text-mobile {
+        display: inline;
+    }
+}
+
+/* ============================================
+   PANTALLAS GRANDES (> 2000px)
+   ============================================ */
+@media (min-width: 2000px) {
+    #logo-cabecera {
+        height: 12em;
+    }
+
+    .view-home {
+        margin-top: 40rem;
+        max-width: 1800px;
+        gap: 60px;
+    }
+
+    .main-card {
+        font-size: 3.5rem;
+        padding: 80px 40px;
+        margin-top: 20rem;
+        border-width: 6px;
+        border-radius: 30px;
+    }
+
+    .view-detail {
+        grid-template-columns: 400px 1fr;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .header-title {
+        font-size: 3rem;
+        padding: 20px;
+    }
+
+    .sidebar {
+        gap: 15px;
+    }
+
+    .menu-btn {
+        padding: 25px 30px;
+        font-size: 1.8rem;
+        border-radius: 15px;
+        border-width: 3px;
+    }
+
+    .content-area {
+        border-width: 8px;
+        border-radius: 60px;
+    }
+
+    .placeholder-text {
+        font-size: 2.5rem;
+    }
+
+    .back-btn {
+        bottom: 50px;
+        left: 50px;
+        padding: 25px 50px;
+        font-size: 2rem;
+        border-radius: 60px;
+    }
+
+    #fondo-body {
+        background-size: cover;
+    }
+}
+
+@media (min-width: 2140px) and (max-width: 5000px) {
+    #fondo-body {
+        background-size:cover;
+    }
+    #logo-cabecera {
+        height: 15em;
+    }
+    .view-home {
+    margin-top: 35rem;
+            }
+    .main-card {
+        font-size: 3.3rem;
+        padding: 4rem;
+        margin: 2rem;
+        margin-top: 15rem;
+    }
+    .view-detail {
+        margin-top: 10rem;
+    }
+     .menu-btn {
+         padding: 4rem 1rem; 
+        font-size: 2rem;
+        text-align: center;
+     }
+     .back-btn {
+         padding: 2rem 4rem;
+        font-size: 2.5rem;
+     }
+}
