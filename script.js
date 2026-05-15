@@ -1,20 +1,20 @@
 // Mapa de videos con URLs absolutas de EducaMadrid
 const videoMap = {
     sti: {
-        "Iluminación": "https://url-ejemplo.educa.madrid.org/video/iluminacion.mp4",
-        "Sonido": "https://url-ejemplo.educa.madrid.org/video/sonidoPA.mp4",
-        "Vídeo": "https://url-ejemplo.educa.madrid.org/video/video.mp4",
-        "Domótica": "https://url-ejemplo.educa.madrid.org/video/domotica.mp4",
-        "Redes": "https://url-ejemplo.educa.madrid.org/video/Redes.mp4",
-        "IoT": "https://url-ejemplo.educa.madrid.org/video/IoT.mp4",
+        "Iluminación": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/Iluminacion.mp4",
+        "Sonido": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/sonidoPA.mp4",
+        "Vídeo": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/video.mp4",
+        "Domótica": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/Domotica.mp4",
+        "Redes": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/Redes.mp4",
+        "IoT": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/IoT.mp4",
         "Telefonía": "https://url-ejemplo.educa.madrid.org/video/telefonia.mp4",
         "ICT": "https://url-ejemplo.educa.madrid.org/video/ict.mp4",
-        "Gestión de Proyectos": "https://url-ejemplo.educa.madrid.org/video/gestion_proyectos.mp4"
+        "Gestión de Proyectos": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/gestion_de_proyectos.mp4"
     },
     it: {
         "CCTV": "https://url-ejemplo.educa.madrid.org/video/cctv.mp4",
-        "IEB": "https://url-ejemplo.educa.madrid.org/video/IEB.mp4",
-        "Sonido": "https://url-ejemplo.educa.madrid.org/video/sonido_it.mp4",
+        "IEB": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/IEB.mp4",
+        "Sonido": "https://site.educa.madrid.org/ies.salvadorallende.fuenlabrada//wp-content/uploads/ies.salvadorallende.fuenlabrada/2026/05/sonido.mp4",
         "ICT": "https://url-ejemplo.educa.madrid.org/video/ict_it.mp4",
         "Redes y telefonía": "https://url-ejemplo.educa.madrid.org/video/redes_telefonia.mp4",
         "Electrónica Aplicada": "https://url-ejemplo.educa.madrid.org/video/electronica.mp4"
