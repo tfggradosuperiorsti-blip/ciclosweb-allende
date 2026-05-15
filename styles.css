@@ -7,13 +7,13 @@
     /* Fuente base dinámica: se ajusta al ancho de la pantalla */
     --font-base: clamp(16px, 1.2vw, 24px);
 }
-/**
+
 #logo-cabecera {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: clamp(5em, 8vh, 10em); /* Altura adaptativa */ /*
+    height: clamp(5em, 8vh, 10em); /* Altura adaptativa */
     background-image: url(assets/img/I.E.S.-SALVADOR-ALLENDE.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,8 +21,6 @@
     z-index: 10;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
 }
-
-*/
 
 body, html {
     margin: 0;
@@ -161,4 +159,80 @@ video {
 /* Mantenemos tu diseño móvil existente */
 @media (max-width: 768px) {
     /* (Se mantiene tu bloque @media max-width: 768px original) */
+}
+
+/* --- ADAPTACIÓN PARA MÓVILES Y TABLETS --- */
+@media (max-width: 1024px) {
+    /* Permitimos hacer scroll si la pantalla es muy pequeña */
+    body, html {
+        overflow-y: auto; 
+    }
+
+    /* Cambiamos la vista de detalle para que apile los elementos verticalmente */
+    .view-detail {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 85vh;
+        margin-top: 10vh; /* Deja espacio para el logo de la cabecera */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Convertimos la lista de botones en un carrusel horizontal */
+    .sidebar {
+        flex-direction: row;
+        overflow-x: auto; /* Permite deslizar a los lados con el dedo */
+        overflow-y: hidden;
+        padding-bottom: 10px; /* Espacio para que no se corte la sombra/borde */
+        width: 100%;
+    }
+
+    .menu-btn {
+        flex: 0 0 auto; /* Evita que los botones se aplasten */
+        white-space: nowrap; /* Mantiene el texto del botón en una sola línea */
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+
+    /* Ajustamos el área del vídeo para que sea protagonista en el móvil */
+    .content-area {
+        width: 100%;
+        min-height: 30vh; /* Altura mínima garantizada para el vídeo */
+        flex-grow: 1; /* Ocupa el espacio restante */
+        border-radius: 15px;
+        border-width: 3px;
+    }
+
+    /* Ajustamos las tarjetas de la pantalla de inicio */
+    .view-home {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+        padding: 5vw;
+        gap: 20px;
+    }
+
+    .main-card {
+        font-size: 1.5rem;
+        padding: 40px 20px;
+        min-height: auto;
+        margin-top: 0;
+    }
+
+    /* Botón de volver adaptado a la pantalla táctil pequeña */
+    .back-btn {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        font-size: 1.2rem;
+        bottom: 0 !important;
+        left: 0 !important;
+    }
 }
