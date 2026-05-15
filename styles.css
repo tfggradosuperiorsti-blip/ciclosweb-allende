@@ -154,11 +154,24 @@ video {
         bottom: 60px !important;
         left: 60px !important;
     }
+
+    /* Ajuste para ocultar mensaje de carrusel para móviles */
+    .text-mobile {
+    display: none;
+}
 }
 
 /* Mantenemos tu diseño móvil existente */
 @media (max-width: 768px) {
     /* (Se mantiene tu bloque @media max-width: 768px original) */
+     /* Ocultamos el texto de PC y mostramos el de móvil */
+    .text-desktop {
+        display: none;
+    }
+    
+    .text-mobile {
+        display: inline;
+    }
 }
 
 /* --- ADAPTACIÓN PARA MÓVILES Y TABLETS --- */
