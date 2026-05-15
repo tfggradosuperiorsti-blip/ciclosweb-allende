@@ -201,10 +201,14 @@ video {
     /* Convertimos la lista de botones en un carrusel horizontal */
     .sidebar {
         flex-direction: row;
-        overflow-x: auto; /* Permite deslizar a los lados con el dedo */
+        overflow-x: auto;
         overflow-y: hidden;
-        padding-bottom: 10px; /* Espacio para que no se corte la sombra/borde */
-        width: 100%;
+        gap: 6px;
+        padding: 8px 4px; 
+        background: #000;
+        border-radius: 8px;
+        align-items: center; 
+        -webkit-overflow-scrolling: touch;
     }
 
     .menu-btn {
