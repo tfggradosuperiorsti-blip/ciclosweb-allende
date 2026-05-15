@@ -7,13 +7,13 @@
     /* Fuente base dinámica: se ajusta al ancho de la pantalla */
     --font-base: clamp(16px, 1.2vw, 24px);
 }
-
+/**
 #logo-cabecera {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: clamp(5em, 8vh, 10em); /* Altura adaptativa */
+    height: clamp(5em, 8vh, 10em); /* Altura adaptativa */ /*
     background-image: url(assets/img/I.E.S.-SALVADOR-ALLENDE.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,6 +21,8 @@
     z-index: 10;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
 }
+
+*/
 
 body, html {
     margin: 0;
